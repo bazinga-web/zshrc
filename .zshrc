@@ -109,6 +109,10 @@ alias zshrc="vim ~/.zshrc"
 alias update="source ~/.zshrc"
 alias vimrc="vim ~/.vim/vimrc"
 alias ra="ranger"
+# git alias
+alias gs="git status"
+alias gp="git pull"
+alias gc="git config credential.helper store"
 
 # where proxy
 proxy ()  {
