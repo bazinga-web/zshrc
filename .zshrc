@@ -108,6 +108,7 @@ alias gitlab="cd /mnt/e/gitlab"
 alias zshrc="vim ~/.zshrc"
 alias update="source ~/.zshrc"
 alias vimrc="vim ~/.vim/vimrc"
+alias ra="ranger"
 
 # where proxy
 proxy ()  {
