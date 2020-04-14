@@ -3,12 +3,14 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/jarvis/.oh-my-zsh"
+export RANGER_LOAD_DEFAULT_RC=FALSE
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+# ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,21 +100,25 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Allow the use of the z plugin to easily navigate directories
+#. /usr/local/etc/profile.d/z.sh
+
 # Directory Navigate
 alias work="cd /mnt/e/work_code"
 alias learn="cd /mnt/e/learn"
 alias github="cd /mnt/e/github"
 alias gitlab="cd /mnt/e/gitlab"
+alias tao="cd /mnt/c/Users/Tao"
+alias desk="cd /mnt/c/Users/Tao/Desktop"
 
 # fast config
 alias zshrc="vim ~/.zshrc"
+alias bashrc="vim ~/.bashrc"
 alias update="source ~/.zshrc"
 alias vimrc="vim ~/.vim/vimrc"
+alias hyperc="vim /mnt/c/Users/Tao/AppData/Roaming/Hyper/.hyper.js"
 alias ra="ranger"
-# git alias
-alias gs="git status"
-alias gp="git pull"
-alias gc="git config credential.helper store"
+alias rc="vim ~/.config/ranger/rc.conf"
 
 # where proxy
 proxy ()  {
@@ -127,3 +133,7 @@ noproxy () {
   unset https_proxy
   echo "HTTP Proxy off"
 }
+# nvm config set
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
